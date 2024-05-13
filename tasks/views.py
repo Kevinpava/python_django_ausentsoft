@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
@@ -40,11 +40,7 @@ def signup(request):
                 'form': UserCreationForm, 
                 "error": 'contraseña no coincide'
             })
-
-           
-
-           
-        
+       
 def tasks(request):
     tasks  = Task.objects.filter(user =  request.user,datecompleted__isnull=True)
     return render(request, 'tasks.html', {'tasks': tasks})
@@ -68,14 +64,10 @@ def create_task(request):
             'error': 'porfavor pruebe con valor valido'
          })
  
- 
-
-
 def signout(request):
     logout(request)
     return redirect('home')
    
-
 def signin(request):
   if request.method == 'GET': 
         return render(request, 'signin.html', {
@@ -93,8 +85,16 @@ def signin(request):
           login(request,user)
           return redirect('tasks')
           
-
+def task_detail(request,task_id):
+    task =  get_object_or_404(Task,pk=task_id)
+    return render(request, 'task_detail.html', {'task': task} )
     
+
+def sobre_nosotros(request):
+    return render(request, 'sobre_nosotros.html')
+
+def servicios(request):
+    return render(request, 'servicios.html')
 
 
 

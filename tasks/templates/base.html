@@ -4,36 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Django CRUD</title>
+
+    <script src="//code.tidio.co/yuigh6y88nlgioimptzircilu2hexulb.js" async></script>
+
+
+
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li>
-            <a href="/">home</a>
-        </li>
-        <li>
-            <a href="/tasks">tasks</a>
-        </li>
+    <nav class="bg-white md:flex md:items-center md:justify-between fixed w-full h-16 z-10 shadow-xl">
+        <div class="h-full flex justify-between items-center mx-24 max-lg:mx-5">
+            <!-- LOGO -->
+            <div class="text-xl my-auto"><a href="./paginaPrincipal.html"><img class="logo" src="../../img/Logo_negro.jpeg" alt=""  >AusentSoft</a></div>
+            <!-- LINK DE NAVEGACION -->
 
-        
 
-        {% if user.is_authenticated %}
-        <li>
-            <a href="/logout">logout</a>
-        </li>
-        {% else %}
-        <li>
-            <a href="/signup">signup</a>
-        </li>
+            <span class="text-3xl mx-2">
+                <ion-icon name="reorder-three-outline" class="cursor-pointer md:hidden block"
+                    onclick="Menu(this)"></ion-icon>
+            </span>
+        </div>
+        <ul class="md:flex md:items-center  z-[-1] md:z-auto md:static absolute  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500">
+            
+            
+            <li class="md:ml-0 sm:pl-12 md:pl-12 text-justify lg:pl-0">
+                <a href="/" class="mx-4 my-6 md:my-0   hover:text-sky-300  hover:underline hover:duration-500">Inicio</a>
+            </li>
 
-        <li>
-            <a href="/signin">Signin</a>
-        </li>
-        {% endif %}
-        
-    </ul>
-</nav>
+            <li class="md:ml-0 sm:pl-12 md:pl-12 text-justify lg:pl-0">
+                <a href="/sobre_nosotros" class="mx-4 my-6 md:my-0   hover:text-sky-300  hover:underline hover:duration-500">Sobre Nosotros</a>
+            </li>
+
+            <li class="md:ml-0 sm:pl-12 md:pl-12 text-justify lg:pl-0">
+                <a href="/servicios" class="mx-4 my-6 md:my-0   hover:text-sky-300  hover:underline hover:duration-500">Productos</a>
+            </li>
+
+
+
+
+
+            {% if user.is_authenticated %}
+
+            <li>
+                <a href="/tasks" class="mx-4 my-6 md:my-0 hover:text-sky-300  hover:underline hover:duration-500">Tareas</a>
+            </li>
+            <li>
+                <a href="/tasks/create" class="mx-4 my-6 md:my-0 hover:text-sky-300  hover:underline hover:duration-500">Crear tarea</a>
+            </li>
+
+            <li>
+                <a href="/logout" class="mx-4 my-6 md:my-0 hover:text-sky-300  hover:underline hover:duration-500">Cerrar sesion</a>
+            </li>
+            {% else %}
+            <li>
+                <a href="/signup" class="mx-4 my-6 md:my-0 hover:text-sky-300  hover:underline hover:duration-500">Registrar</a>
+            </li>
+
+            <li>
+                <a href="/signin" class="mx-4 my-6 md:my-0 hover:text-sky-300  hover:underline hover:duration-500">Iniciar sesion</a>
+            </li>
+            {% endif%}
+
+           
+        </ul>
+        <!-- BOTONES REGISTRO -->
+    </nav>
 
 
     {% block content %}

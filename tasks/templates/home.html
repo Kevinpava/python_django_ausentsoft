@@ -1,7 +1,486 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Home</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homee</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil ea recusandae quam harum inventore, officiis rem nemo enim atque libero corporis. Fuga hic delectus molestias maiores consequatur qui explicabo nemo at, id voluptatem possimus iure repudiandae dolor ex aliquid? Eos, qui voluptatibus error tempore perferendis voluptatem, modi rem iure, sapiente temporibus dolore ut placeat dicta laborum culpa. Magni placeat temporibus molestiae, optio a beatae nulla ex saepe deleniti libero mollitia architecto? Facere, perspiciatis! Sequi perferendis earum repudiandae. Provident, rem aliquam. Ad provident perspiciatis earum architecto nostrum odio, voluptatum est quibusdam laborum tenetur blanditiis autem facilis ducimus molestiae veniam illo?</p>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+
+</head>
+
+<body class=" font-['Poppins'] ">
+
+
+    <header class=" text-black  font-medium">
+        
+        <section class="mb-24 bg-sky-300 min-[319px]:max-[639px]:px-auto">
+            <div class="px-6 text-center flex flex-col justify-center h-screen mx-80 pt-16 max-lg:h-full max-lg:mx-5 max-lg:pt-0 min-[319px]:max-[639px]:px-auto">
+              <h1 class="mt-2 text-[44px] font-bold max-lg:pt-24">
+                Gestiona las ausencias de tu equipo con facilidad, precisión y confianza.
+              </h1>
+              <p class="my-10 text-[18px]">
+                Optimiza la gestión de vacaciones y permisos de tu equipo con nuestra plataforma intuitiva y eficiente.
+                Simplifica los procesos, elimina las tareas repetitivas y enfócate en impulsar el éxito de tu empresa desde el primer clic
+              </p>
+              <div class="flex justify-center mb-12">
+                <a class="bg-white inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal mx-5 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2"
+                  data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Solicita una demo</a>
+                <a class="bg-white inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal mx-5 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:mx-6"
+                  data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Mas informacion</a>
+              </div>
+            </div>
+            <!-- Jumbotron -->
+          </section>
+          
+      <!-- Section: Design Block -->
+    </header>
+
+
+
+    <main>
+        <!-- Div de marcas que trabajan con nosotros -->
+        <h2 class="mx-24 text-center mb-12 md:my-10 text-4xl font-bold min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2">Corporaciones que colaboran con nosotros</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4">
+            <div class=" text-center py-5"><img class="w-[70%] md:w-[40%] m-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Jira_Logo.svg/2560px-Jira_Logo.svg.png" alt=""></div>
+            <div class=" text-center py-5"><img class="w-[70%] md:w-[40%] m-auto" src="https://1000marcas.net/wp-content/uploads/2021/02/Logo-Duolingo.png" alt=""></div>
+            <div class=" text-center py-5"><img class="w-[70%] md:w-[40%] m-auto pt-5" src="data:image/png;base64,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" alt=""></div>
+            <div class=" text-center py-5"><img class="w-[70%] md:w-[40%] m-auto pt-7" src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Adobe_Corporate_Logo.png" alt=""></div>
+        </div>
+        <!-- Fin del Div de marcas que trabajan con nosotros -->
+ 
+        <!-- Div que es Ausentsoft -->
+        <div class="mt-5">
+            <div class="bg-blue-50 w-full my-10 mx-auto">
+                <section class="mb-24 max-lg:mx-5 max-lg:mb-5">
+                    <div class="flex flex-wrap mx-5">
+                        <div class="mb-12 w-full shrink-0 grow-0 basis-auto lg:mb-0 lg:w-5/12">
+                            <div class="flex lg:py-12">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/people/033.jpg"
+                                class="w-full rounded-lg shadow-lg dark:shadow-black/20 lg:ml-[50px] max-lg:w-[80%] max-lg:mx-auto max-lg:mt-24" alt="image" />
+                            </div>
+                        </div>
+                        <div class="w-full shrink-0 grow-0 basis-auto lg:w-7/12">
+                            <div class="flex h-full items-center rounded-lg bg-primary p-6 text-center text-white lg:pl-12 lg:text-left">
+                                <div class="lg:pl-12 text-black mx-10 max-lg:w-full max-lg:mx-2">
+                                    <h2 class="mb-6 text-3xl font-bold">
+                                        ¿Qué es Ausentsoft?
+                                    </h2>
+                                    <p class="mb-6 pb-2 lg:pb-0 text-justify">
+                                        Ausentsoft es una plataforma diseñada para simplificar la gestión de vacaciones,
+                                        ausencias y permisos para empresas de todos los tamaños. Con nuestra solución intuitiva y 
+                                        eficiente, las empresas pueden centralizar y automatizar sus procesos de gestión de tiempo.
+                                        <br><br>
+                                        ¡Descubre las características premium de nuestra plataforma con una demostración personalizada!
+                                        Nuestro equipo estará encantado de mostrarte cómo nuestras herramientas avanzadas pueden llevar 
+                                        la gestión de vacaciones y permisos de tu empresa al siguiente nivel. 
+                                    </p>
+                                    <div class="flex justify-center mb-5">
+                                        <a class="text-center bg-white border border-gray-400 inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal mx-5 hover:bg-slate-100 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2"
+                                          data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Solicita una demo</a>
+                                        <a class="text-center bg-white border border-gray-400 inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal mx-5 hover:bg-slate-100 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2"
+                                          data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Mas informacion</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- Fin del Div que es Ausentsoft -->
+            
+
+            
+            <!-- Div info adicional AusentSoft -->
+            <div class="mx-24 text-black text-centermin-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2">
+                <h2 class="mb-6 text-5xl font-bold text-center">Soluciones para todas las empresas</h2>
+                <p class="mx-24 text-lg max-lg:mx-2 text-center">
+                    En Ausentsoft, estamos comprometidos a ayudar a empresas de todos los tamaños a optimizar la gestión
+                    del tiempo y del personal. Descubre cómo nuestras soluciones pueden resolver los principales desafíos
+                    que enfrentan las empresas en crecimiento y llevar tu gestión de vacaciones y permisos al siguiente nivel.
+                </p>
+            </div>
+            <!-- Din del Div info adicional AusentSoft -->
+
+            <!-- DIV COMPONENTES DE CARD -->
+            <div class="grid justify-center md:grid-cols-3 gap-8 m-5">
+                <!-- 1 Tarjera -->
+                <div class="flex justify-center text-center">
+                    <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-200 dark:border-gray-700 max-lg:min-h-[50rem]">
+                        <img class="rounded-t-lg" src="https://media.istockphoto.com/id/598259106/es/foto/hacer-negocios.jpg?s=612x612&w=0&k=20&c=R9N_FYIIQwUg7wZEJ1U7dtyXjxt9L2jDL9j1wdbkBUs=" alt="" />
+                        <div class="p-5 flex flex-col justify-between h-80 md:max-lg:h-[600px]">
+                            <div>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">Encuentra todo en un mismo lugar</h5>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-600 text-center">Dile adiós a las complicadas hojas de cálculo y los interminables correos electrónicos. Con Ausentsoft, centraliza la gestión de vacaciones y permisos en una plataforma segura y confiable.</p>
+                            </div>
+                            <div>
+                                <a href="#" class="md:max-lg:h-[56px] inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Pruébalo gratis ahora
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 2 Tarjeta -->
+            
+                <div class="flex justify-center text-center">
+                    <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-200 dark:border-gray-700 max-lg:min-h-[50rem]">
+                        <img class="rounded-t-lg" src="https://media.istockphoto.com/id/1493212300/es/foto/joven-financiero-enfocado-sentado-en-el-escritorio-haciendo-papeleo-trabajando-con-impuestos.jpg?s=612x612&w=0&k=20&c=vJGK6xhutxyMDGRK9Yqke0uyb61fIOawu5G31VoxbxM=" alt="" />
+                        <div class="p-5 flex flex-col justify-between h-80 md:max-lg:h-[600px]">
+                            <div>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">Fácil de usar para todo el equipo</h5>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-600">Ausentsoft es intuitivo y amigable, diseñado para que todos en tu equipo puedan gestionar sus vacaciones y permisos de manera rápida y sencilla.</p>
+                            </div>
+                            <div>
+                                <a href="#" class="md:max-lg:h-[56px] inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Descubre sus funcionalidades
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- 3 Tarjeta -->
+            
+                <div class="flex justify-center text-center">
+                    <div class="max-w-md bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-200 dark:border-gray-700 max-lg:min-h-[50rem]">
+                        <img class="rounded-t-lg" src="https://media.istockphoto.com/id/1206201819/es/foto/con-el-trabajo-en-equipo-est%C3%A1n-bien-en-camino-al-%C3%A9xito.jpg?s=612x612&w=0&k=20&c=W6hDXTIn-0R-yqJxqTDqJDnHiT_E-y9arOyHITCqQc8=" alt="" />
+                        <div class="p-5 flex flex-col justify-between h-80 md:max-lg:h-[600px]">
+                            <div>
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark:text-black">Nos adaptamos a tu presupuesto</h5>
+                                <p class="mb-3 font-normal text-gray-700 dark:text-gray-600">Con planes flexibles y personalizables, Ausentsoft se ajusta a las necesidades y al presupuesto de tu empresa. Paga solo por lo que realmente necesitas y optimiza tu gestión de recursos humanos.</p>
+                            </div>
+                            <div>
+                                <a href="#" class="md:max-lg:h-[56px] inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Ver todos nuestros planes
+                                    <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Div COMPONENTES TARJETA -->
+
+        <!-- Div Testimonios -->
+        <div class="mx-auto md:px-6">
+            <section class="mb-32 text-center">
+                <h2 class="mb-5 text-3xl font-bold">Testimonials</h2>
+                <div class="grid gap-x-6 md:grid-cols-3 lg:gap-x-12">
+                   <!-- 1 Testimonios --> 
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).jpg"
+                            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+                        </div>
+                        <h5 class="mb-2 text-lg font-bold">Maria Smantha</h5>
+                        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+                            Web Developer
+                        </h6>
+                        <p class="mb-4 max-md:mx-24 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2">
+                            Descubrir Ausentsoft fue un gran alivio para nuestro equipo en TechSolutions. La gestión
+                            de vacaciones y permisos nunca ha sido tan fácil y organizada. ¡Estamos encantados con la 
+                            simplicidad y eficacia que ofrece esta plataforma!
+                        </p>
+                        <ul class="mb-0 flex justify-center">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m480 757 157 95-42-178 138-120-182-16-71-168v387ZM233 976l65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Fin de 1 Testimonios -->
+
+                    <!-- 2 Testimonios -->
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).jpg"
+                            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+                        </div>
+                        <h5 class="mb-2 text-lg font-bold">Lisa Cudrow</h5>
+                        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+                            Graphic Designer
+                        </h6>
+                        <p class="mb-4 max-md:mx-24 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2">
+                            Ausentsoft ha cambiado completamente nuestra forma de trabajar en GlobalTech. Antes estábamos 
+                            atrapados en un mar de correos electrónicos y hojas de cálculo desorganizadas, pero ahora todo 
+                            está centralizado y claro.
+                        </p>
+                        <ul class="mb-0 flex justify-center">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Fin de 2 Testimonios -->
+
+                    <!-- 3 Testimonios -->
+                    <div class="mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg"
+                            class="w-32 rounded-full shadow-lg dark:shadow-black/20" />
+                        </div>
+                        <h5 class="mb-2 text-lg font-bold">John Smith</h5>
+                        <h6 class="mb-4 font-medium text-primary dark:text-primary-400">
+                            Marketing Specialist
+                        </h6>
+                        <p class="mb-4 max-md:mx-24 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:m-2">
+                            Estamos impresionados con la flexibilidad y adaptabilidad de Ausensoft en Bright Ideas. Sus planes 
+                            personalizables se ajustan perfectamente a nuestras necesidades y presupuesto. Gracias a esto mi
+                            equipo pudo adquirir el software
+                        </p>
+                        <ul class="mb-0 flex justify-center">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m233 976 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Z" />
+                                </svg>
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960" class="w-5 text-warning">
+                                    <path fill="currentColor"
+                                    d="m323 851 157-94 157 95-42-178 138-120-182-16-71-168-71 167-182 16 138 120-42 178Zm-90 125 65-281L80 506l288-25 112-265 112 265 288 25-218 189 65 281-247-149-247 149Zm247-355Z" />
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Fin 3 Testimonios -->
+                </div>
+            </section>
+        </div>
+        <!-- Fin Testimonios -->
+
+        <section class="py-2 bg-sky-300 min-[319px]:max-[639px]:px-auto">
+            <div class="px-6 text-center flex flex-col justify-center mx-80 pt-16 max-lg:h-full max-lg:mx-5 max-lg:pt-0 min-[319px]:max-[639px]:px-auto">
+              <h2 class="mt-2 text-[36px] font-bold max-lg:pt-24">
+                Revoluciona la experiencia de tu equipo e impulsa tu negocio
+              </h2>
+              <p class="mt-5 mx-24 min-[319px]:max-[639px]:mx-5">
+                Solicita una demostración gratuita para aprender cómo transformar todos tus procesos.
+              </p>
+              <div class="flex justify-center mb-12">
+                <a class="mt-5 bg-white inline-block rounded px-12 pt-4 pb-3.5 text-sm font-medium uppercase leading-normal mx-5 min-[319px]:max-[639px]:px-2 min-[319px]:max-[639px]:mx-2"
+                  data-te-ripple-init data-te-ripple-color="light" href="#!" role="button">Solicita una demo</a>
+              </div>
+            </div>
+            <!-- Jumbotron -->
+          </section>
+    </main>
+
+
+
+    <footer class="bg-white dark:bg-gray-200">
+        <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="flex items-center">
+                        <img class="logo" src="/img/Logo-Azul.png" class="h-8 me-3" alt="AusentSoft Logo" />
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Resources
+                        </h2>
+                        <ul class="text-gray-600 dark:text-gray-600 font-medium">
+                            <li class="mb-4">
+                                <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                            </li>
+                            <li>
+                                <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Follow us
+                        </h2>
+                        <ul class="text-gray-500 dark:text-gray-600 font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/Kevinpava/ausentSoft-proyect" class="hover:underline ">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Legal</h2>
+                        <ul class="text-gray-500 dark:text-gray-600 font-medium">
+                            <li class="mb-4">
+                                <a href="#" class="hover:underline">Politicas de privacidad</a>
+                            </li>
+                            <li>
+                                <a href="#" class="hover:underline">Terminos &amp; Condiciones</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-black">© 2024 <a
+                        href="https://flowbite.com/" class="hover:underline">AusentSoft</a>. Derechos de permisos y reservas.
+                </span>
+                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                    <a href="#" class="text-black hover:text-gray-900 dark:hover:text-white">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 8 19">
+                            <path fill-rule="evenodd"
+                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Facebook</span>
+                    </a>
+                    <a href="#" class="text-black hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 21 16">
+                            <path
+                                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                        </svg>
+                        <span class="sr-only">Discord </span>
+                    </a>
+                    <a href="#" class="text-black hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 17">
+                            <path fill-rule="evenodd"
+                                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Twitter page</span>
+                    </a>
+                    <a href="#" class="text-black hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">GitHub account</span>
+                    </a>
+                    <a href="#" class="text-black hover:text-gray-900 dark:hover:text-white ms-5">
+                        <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <span class="sr-only">Dribbble account</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+</body>
+
+<script>
+    function Menu(e) {
+
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = 'close',
+            list.classList.add("top-[20px]"), list.classList.add("opacity-100")) : (e.name = 'menu'
+                , list.classList.remove("top-[20px]"), list.classList.remove("opacity-100"))
+    }
+</script>
+
+</html>
 {% endblock %}
