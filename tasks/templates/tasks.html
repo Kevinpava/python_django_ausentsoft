@@ -3,26 +3,68 @@
 
 
 {% block content %}
-<h1>Tareas</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
 
 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+<body class=" font-['Poppins'] ">
+    <header class="text-black font-medium h-1 ">
+
+        <!-- NAVBAR--> 
+
+    </header>
+    
+<main>
+
+<h1 class="mt-[100px] text-black">Tareas</h1>
+
+<div class="bg-cyan-500 m-10">
 <ul>
     {% for task in tasks %}
-    <li>
-       <a href="{% url 'task_detail' task.id %}">
+    <span class="relative group cursor-pointer hover:text-blue-700">
+    <li class="m-10">
+       <a href="{% url 'task_detail' task.id %}" class="hover:">
         {% if task.important %}
-        <strong>{{task.title}}</strong>
+        <strong><h3 class="text-red-600">Titulo: {{task.title}}</h3></strong>
         {% else %}
-            {{task.title}}
+            <h3 class="font-bold">Titulo: {{task.title}}</h3>
         {% endif %}
 
 
-        <p>{{task.description}}</p>
-        <p>{{task.user.username}}</p>
+        <p><strong>Descripcion: </strong>{{task.description}}</p>
+        <p><strong>Usuario: </strong>{{task.user.username}}</p>
         <p>{{task.important}}</p>
        </a>
     </li>
+    <span class="absolute left-0 -top-6 bg-gray-800 text-white text-sm font-bold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">Editar</span>
+</span>
     {% endfor %}
 </ul>
-
+</div>
+</main>
+</body>
+</html>
 {% endblock %}
