@@ -8,7 +8,7 @@ from .models import Task
 from django.utils import timezone
 from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm
-
+from django.db.models import Q
 # Create your views here.
 def home(request):
     return render(request, 'home.html')
@@ -35,38 +35,21 @@ def signup(request):
             'form': CustomUserCreationForm(),
             "error": 'contraseña no coincide'
         })
+   
 
-    if request.method == 'GET':
-        return render(request, 'signup.html',{
-        'form': UserCreationForm
-    })
-    else:
-        if request.POST['password1'] == request.POST['password2']:
-            try:
-                user = User.objects.create_user(username=request.POST['username'],
-                password=request.POST['password1'])
-                user.save()
-                login(request,user)
-                return redirect('tasks')
-           
-            except IntegrityError:
-                return render(request, 'signup.html',{
-                'form': UserCreationForm, 
-                "error": 'este usuario ya existe'
-            })
-
-
-
-
-
-        return render(request, 'signup.html',{
-                'form': UserCreationForm, 
-                "error": 'contraseña no coincide'
-            })
-       
 def tasks(request):
-    tasks  = Task.objects.filter(user =  request.user,datecompleted__isnull=True)
+    tasks = Task.objects.filter(user=request.user, completed_at__isnull=True)
     return render(request, 'tasks.html', {'tasks': tasks})
+
+def completed_tasks(request):
+    tasks = Task.objects.filter(user=request.user,completed_at__isnull=False )
+    return render(request, 'completed_tasks.html', {'tasks': tasks})
+
+def complete_task(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    task.completed_at = timezone.now()
+    task.save()
+    return redirect('completed_tasks')
 
 def create_task(request):
     if request.method == 'GET':
@@ -122,12 +105,6 @@ def task_detail(request,task_id):
         except ValueError:
             return render(request, 'task_detail.html', {'task': task, 'form': form, 'Error': 'Error Actualizando'} )
 
-def complete_task(request, task_id):
-   task =  get_object_or_404(Task,pk=task_id,user=request.user)
-   if request.method == 'POST':
-       task.datecompleted =  timezone.now()
-       task.save()
-       return redirect('tasks')
 
 
 def delete_task(request, task_id):

@@ -1,59 +1,79 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create Task</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 
-
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
 </head>
-<body class=" font-['Poppins'] ">
-    <header class="text-black font-medium h-1 ">
 
-        <!-- NAVBAR--> 
-
+<body class="font-['Poppins']">
+    <header class="text-black font-medium h-1">
+        <!-- NAVBAR -->
     </header>
     <main>
-        <div class="bg-">
+        <div class="mx-auto max-w-md p-4 bg-white rounded shadow-md">
+            <h1 class="mt-[100px] text-black">Create Task</h1>
 
-    <h1 class="mt-[100px] text-black">created task</h1>
+            {% if error %}
+                <p class="text-red-500">{{ error }}</p>
+            {% endif %}
 
-    {{error}}
+            <form action="/tasks/create/" method="POST" class="space-y-4">
+                {% csrf_token %}
 
+                <div class="form-group">
+                    <label for="id_title" class="block text-sm font-medium text-gray-700">Title:</label>
+                    {{ form.title }}
+                </div>
 
-    <form action="/tasks/create/" method="POST">
-        {% csrf_token %}
+                <div class="form-group">
+                    <label for="id_description" class="block text-sm font-medium text-gray-700">Description:</label>
+                    {{ form.description }}
+                </div>
 
-        {{form}}
+                <div class="form-group">
+                    <label for="id_paid_vacation" class="block text-sm font-medium text-gray-700">Vacaciones Pagas:</label>
+                    {{ form.paid_vacation }}
+                </div>
 
-        <button>
-            save
-        </button>
+                <div class="form-group">
+                    <label for="id_date_range" class="block text-sm font-medium text-gray-700">Rango de Fechas:</label>
+                    <input type="text" id="id_date_range" name="date_range" class="form-control">
+                </div>
 
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                    Save
+                </button>
+            </form>
+        </div>
 
-    </form>
-    </div>
-</main>
+        <!-- Flatpickr JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                flatpickr('#id_date_range', {
+                    mode: 'range',
+                    dateFormat: 'Y-m-d',
+                    locale: {
+                        rangeSeparator: ' to ',
+                    }
+                });
+            });
+        </script>
+    </main>
+</body>
 
+</html>
 {% endblock %}
